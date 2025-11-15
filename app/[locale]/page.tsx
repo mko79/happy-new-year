@@ -56,6 +56,84 @@ export default function LocalePage({ params }: { params: { locale: string } }) {
           </Link>
         </div>
       </main>
+
+      {/* Favorite Celebration Section */}
+      <section className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 md:px-8">
+        <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 border-4 border-gray-200 mt-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">
+            {selectedLocale === 'ar' ? 'احتفالي المفضل' : 'My Favorite Celebration'}
+          </h2>
+          <p className="text-gray-600 text-center text-lg mb-8">
+            {selectedLocale === 'ar' ? 'اكتب عن احتفالك المفضل. ماذا يفعل الناس؟' : 'Write about your favorite celebration. What do people do?'}
+          </p>
+
+          <div className="bg-yellow-50 rounded-2xl p-6 border-2 border-yellow-200">
+            <h3 className="text-xl sm:text-2xl font-bold text-yellow-700 mb-4">
+              {selectedLocale === 'ar' ? 'السؤال:' : 'Question:'}
+            </h3>
+            <p className="text-gray-700 text-lg mb-6">
+              {selectedLocale === 'ar'
+                ? 'صف احتفالك المفضل. ما الأنشطة التي يفعلها الناس عادة خلال هذا الاحتفال؟'
+                : 'Describe your favorite celebration. What activities do people typically do during this celebration?'}
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">1</div>
+                <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                  <p className="text-gray-700">
+                    {selectedLocale === 'ar' ? 'عادة ما يفعل الناس ...' : 'People usually ...'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">2</div>
+                <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                  <p className="text-gray-700">
+                    {selectedLocale === 'ar' ? 'أثناء الاحتفال، العائلات ...' : 'During the celebration, families ...'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">3</div>
+                <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                  <p className="text-gray-700">
+                    {selectedLocale === 'ar' ? 'الأطعمة التقليدية تشمل ...' : 'Traditional foods include ...'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">4</div>
+                <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                  <p className="text-gray-700">
+                    {selectedLocale === 'ar' ? 'هذا الاحتفال خاص لأنه ...' : 'The celebration is special because ...'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">5</div>
+                <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                  <p className="text-gray-700">
+                    {selectedLocale === 'ar' ? 'الأطفال عادة ...' : 'Children often ...'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-500 italic">
+              {selectedLocale === 'ar'
+                ? 'يمكن للطلاب كتابة إجاباتهم في دفاترهم أو على ورقة منفصلة.'
+                : 'Students can write their answers in their notebooks or on a separate sheet of paper.'}
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
