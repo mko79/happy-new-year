@@ -4,6 +4,30 @@ export function proxy(request: NextRequest) {
   // Get the pathname
   const { pathname } = request.nextUrl;
 
+  // Skip static assets - don't redirect these
+  const staticAssetPatterns = [
+    '/sounds/',
+    '/images/',
+    '/locales/',
+    '.svg',
+    '.png',
+    '.jpg',
+    '.jpeg',
+    '.gif',
+    '.ico',
+    '.mp3',
+    '.wav',
+    '.ogg',
+    '.webp',
+  ];
+
+  const isStaticAsset = staticAssetPatterns.some(pattern => pathname.includes(pattern));
+
+  // Skip _next internal paths and static assets
+  if (pathname.startsWith('/_next') || isStaticAsset) {
+    return;
+  }
+
   // Check if the pathname starts with a locale
   const pathnameHasLocale = ['en', 'ar'].some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -19,7 +43,7 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
+    // Match all paths except _next (which is handled in the function)
     '/((?!_next).*)',
   ],
 };

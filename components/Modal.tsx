@@ -22,7 +22,7 @@ const ModalContent: FC<ModalContentProps> = ({ children, onClose, isClosing }) =
 
   return (
     <div
-      className={`w-2xl h-auto bg-white rounded-4xl p-16 shadow-xl relative transform transition-all duration-300 ease-out prose ${isClosing
+      className={`w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-xl lg:max-w-5xl xl:max-w-6xl h-auto bg-white rounded-4xl sm:rounded-5xl lg:rounded-6xl p-8 xs:p-10 sm:p-12 md:p-14 lg:p-18 xl:p-20 shadow-3xl relative transform transition-all duration-300 ease-out prose ${isClosing
         ? 'scale-95 opacity-0'
         : isAnimating
           ? 'scale-95 opacity-0'
@@ -31,7 +31,7 @@ const ModalContent: FC<ModalContentProps> = ({ children, onClose, isClosing }) =
     >
       <button
         onClick={onClose}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none transition-all duration-200 hover:scale-110"
+        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl xs:text-2xl leading-none transition-all duration-200 hover:scale-110"
         aria-label="Close modal"
       >
         ×
