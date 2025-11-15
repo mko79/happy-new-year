@@ -2,7 +2,7 @@
 
 import { Heart, Smile, CheckCircle2 } from "lucide-react";
 import Header from "../../components/Header";
-import { Modal } from "@/components/Modal";
+import { Modal } from "../../components/Modal";
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import confetti from "canvas-confetti";
@@ -957,6 +957,71 @@ export default function Home() {
               <button className="px-6 py-3 bg-blue-600 text-white font-bold rounded-full text-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Check Answers
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Favorite Celebration Section */}
+        <section
+          id="favorite-celebration"
+          className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 md:px-8"
+        >
+          <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 border-4 border-gray-200">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">
+              My Favorite Celebration
+            </h2>
+            <p className="text-gray-600 text-center text-lg mb-8">
+              Write about your favorite celebration. What do people do?
+            </p>
+
+            <div className="bg-yellow-50 rounded-2xl p-6 border-2 border-yellow-200">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-700 mb-4">Question:</h3>
+              <p className="text-gray-700 text-lg mb-6">
+                Describe your favorite celebration. What activities do people typically do during this celebration?
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">1</div>
+                  <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                    <p className="text-gray-700">People usually ...</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">2</div>
+                  <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                    <p className="text-gray-700">During the celebration, families ...</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">3</div>
+                  <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                    <p className="text-gray-700">Traditional foods include ...</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">4</div>
+                  <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                    <p className="text-gray-700">The celebration is special because ...</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">5</div>
+                  <div className="flex-1 border-b-2 border-gray-300 pb-2">
+                    <p className="text-gray-700">Children often ...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-gray-500 italic">
+                Students can write their answers in their notebooks or on a separate sheet of paper.
+              </p>
             </div>
           </div>
         </section>
