@@ -25,14 +25,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-  params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params?: { locale?: string };
-}>) {
+}) {
 
   return (
-    <html lang={'en'}>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

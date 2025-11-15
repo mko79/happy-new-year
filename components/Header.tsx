@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-export default function Header({ }: { currentLocale: string }) {
+export default function Header({ currentLocale }: { currentLocale?: string }) {
   return (
     <header className="bg-white shadow-sm fixed w-full top-0 z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
