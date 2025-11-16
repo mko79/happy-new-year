@@ -33,10 +33,10 @@ export default function Home() {
       imageUrl: party,
     },
     {
-      word: "specail",
+      word: "special",
       definiton: "exceplional, unique",
       part: "adjective",
-      example: "this is a specail gift",
+      example: "this is a special gift",
       imageUrl: specail,
     },
     {
@@ -306,7 +306,7 @@ export default function Home() {
   }, [matchedPairs.size, vocabulary.length, triggerBigCelebration]);
 
   return (
-    <div className="bg-gradient-to-br from-blue-400 to-indigo-100 flex flex-col">
+    <div className="bg-gradient-to-br from-blue-200 to-indigo-100 flex flex-col">
       <Header currentLocale="en" />
 
       <main className="flex flex-col items-center justify-center flex-grow p-4 sm:p-6 md:p-8">
@@ -321,7 +321,7 @@ export default function Home() {
               </h1>
               <div className="flex flex-col xs:flex-row items-center gap-2 xs:gap-x-2 not-prose text-center">
                 <p className="text-gray-500 text-xs sm:text-sm md:text-base">presented by:</p>
-                <ul className="flex flex-wrap justify-center gap-1 xs:gap-2 sm:gap-x-4 text-blue-600 font-medium text-xs sm:text-sm md:text-base">
+                <ul className="flex flex-wrap justify-center gap-1 xs:gap-2 sm:gap-x-4 text-blue-600 font-medium text-xs sm:text-sm md:text-base capitalize font-semibold">
                   <li>dyiam kolaib</li>
                   <li>shahd almasry</li>
                   <li>hala al hashmi</li>
@@ -371,7 +371,7 @@ export default function Home() {
               what is your favorite celebration?
             </h3>
             <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold text-gray-600 !mt-0 text-center">
-              what you are doing in last new year?{" "}
+              what were you doing on last new year's Eve?
             </h3>
             <div className="flex gap-x-3 xs:gap-x-4 sm:gap-x-5 not-prose">
               <Heart className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-gray-500" />
@@ -391,15 +391,15 @@ export default function Home() {
           id="vocabulary"
           className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full max-w-7xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full max-w-full">
             {vocabulary.map((item) => {
               return (
                 <Modal
                   key={item.word}
                   trigger={
-                    <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8 p-4 bg-white rounded-4xl shadow-2xl hover:shadow-3xl transition-all cursor-pointer border-4 border-gray-200 hover:border-blue-600 w-full transform hover:-translate-y-3 duration-300">
+                    <div className="flex flex-col w-96 sm:w-80 items-center gap-6 p-4 bg-white rounded-4xl shadow-2xl hover:shadow-3xl transition-all cursor-pointer border-4 border-gray-200 hover:border-blue-600 transform hover:-translate-y-3 duration-300">
                       {item.imageUrl ? (
-                        <div className="w-full aspect-square max-w-[200px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[360px] relative overflow-hidden rounded-3xl">
+                        <div className="w-full aspect-square max-w-full md:max-w-[280px] lg:max-w-[320px] xl:max-w-[360px] relative overflow-hidden rounded-3xl">
                           <Image
                             src={item.imageUrl}
                             alt={item.word}
@@ -412,7 +412,7 @@ export default function Home() {
                           <span className="text-gray-400 text-4xl sm:text-5xl md:text-6xl">📝</span>
                         </div>
                       )}
-                      <span className="text-black font-extrabold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                      <span className="text-black font-extrabold text-center text-lg sm:text-xl md:text-2xl lg:text-3xl capitalize">
                         {item.word}
                       </span>
                     </div>
@@ -481,7 +481,7 @@ export default function Home() {
                         key={item.word}
                         onClick={() => handleWordClick(item.word)}
                         className={`
-                          flex items-center gap-3 xs:gap-4 sm:gap-4 p-3 xs:p-4 sm:p-5 bg-white rounded-2xl shadow-lg
+                          flex items-center gap-3 xs:gap-4 sm:gap-4 p-2 xs:p-4 bg-white rounded-2xl shadow-lg
                           transition-all cursor-pointer border-2 transform hover:-translate-y-1 duration-300
                           ${isMatched
                             ? "border-green-500 bg-green-50"
@@ -492,7 +492,7 @@ export default function Home() {
                         `}
                       >
                         {item.imageUrl && (
-                          <div className="w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 relative overflow-hidden rounded-xl flex-shrink-0">
+                          <div className="w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-20 relative overflow-hidden rounded-xl flex-shrink-0">
                             <Image
                               src={item.imageUrl}
                               alt={item.word}
@@ -501,7 +501,7 @@ export default function Home() {
                             />
                           </div>
                         )}
-                        <span className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-gray-800 flex-grow">
+                        <span className="text-base sm:text-lg md:text-xl font-bold text-gray-800 flex-grow capitalize">
                           {item.word}
                         </span>
                         {isMatched && (
@@ -531,7 +531,7 @@ export default function Home() {
                           key={`${def.word}-${index}`}
                           onClick={() => handleDefinitionClick(def.definition, def.word)}
                           className={`
-                            p-3 xs:p-4 sm:p-5 bg-white rounded-2xl shadow-lg transition-all cursor-pointer border-2 transform hover:-translate-y-1 duration-300
+                            p-4 xs:p-6 sm:p-8 bg-white rounded-2xl shadow-lg transition-all cursor-pointer border-2 transform hover:-translate-y-1 duration-300
                             ${isMatched
                               ? "border-green-500 bg-green-50"
                               : isSelected || isCorrectForSelected
@@ -635,16 +635,16 @@ export default function Home() {
               <table className="w-full border-collapse min-w-[1000px] text-xl sm:text-2xl">
                 <thead>
                   <tr className="bg-blue-100">
-                    <th className="border border-gray-300 p-3 text-left font-bold text-gray-700">Tradition</th>
-                    <th className="border border-gray-300 p-3 text-left font-bold text-gray-700">Countries</th>
-                    <th className="border border-gray-300 p-3 text-left font-bold text-gray-700">Your Answer</th>
-                    <th className="border border-gray-300 p-3 text-left font-bold text-gray-700">Correct Answer</th>
+                    <th className="border border-gray-300 p-4 sm:p-6 text-left font-bold text-gray-700">Tradition</th>
+                    <th className="border border-gray-300 p-4 sm:p-6 text-left font-bold text-gray-700">Countries</th>
+                    <th className="border border-gray-300 p-4 sm:p-6 text-left font-bold text-gray-700">Your Answer</th>
+                    <th className="border border-gray-300 p-4 sm:p-6 text-left font-bold text-gray-700">Correct Answer</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="border border-gray-300 p-4 sm:p-6">People eat special food</td>
-                    <td className="border border-gray-300 p-3">
+                    <td className="border border-gray-300 p-4 sm:p-6">
                       <div className="flex flex-col space-y-2">
                         <label className="flex items-center">
                           <input type="checkbox" name="q1" value="Netherlands" className="mr-2" />
@@ -905,23 +905,17 @@ export default function Home() {
               {/* Sentence 1 */}
               <div className="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200">
                 <h3 className="text-xl sm:text-2xl font-bold text-blue-700 mb-4">1. On New Year's Day, I ...</h3>
-                <div className="space-y-4">
+                <div className="space-y-8">
                   <div className="flex items-start">
-                    <input type="radio" id="sentence1a" name="sentence1" className="mt-1 mr-3" />
-                    <label htmlFor="sentence1a" className="text-gray-700 text-lg">
-                      On New Year's Day, I watch fireworks with my family at midnight.
+                    <label htmlFor="sentence1a" className="bg-gray-400 text-lg w-full h-px">
+                    </label>
+                  </div>
+                  <div className="flex items-center">
+                    <label htmlFor="sentence1a" className="bg-gray-400 text-lg w-full h-px">
                     </label>
                   </div>
                   <div className="flex items-start">
-                    <input type="radio" id="sentence1b" name="sentence1" className="mt-1 mr-3" />
-                    <label htmlFor="sentence1b" className="text-gray-700 text-lg">
-                      On New Year's Day, I cook traditional food and share it with my neighbors.
-                    </label>
-                  </div>
-                  <div className="flex items-start">
-                    <input type="radio" id="sentence1c" name="sentence1" className="mt-1 mr-3" />
-                    <label htmlFor="sentence1c" className="text-gray-700 text-lg">
-                      On New Year's Day, I make resolutions for the coming year and set new goals.
+                    <label htmlFor="sentence1a" className="bg-gray-400 text-lg w-full h-px">
                     </label>
                   </div>
                 </div>
@@ -930,23 +924,17 @@ export default function Home() {
               {/* Sentence 2 */}
               <div className="bg-green-50 rounded-2xl p-6 border-2 border-green-200">
                 <h3 className="text-xl sm:text-2xl font-bold text-green-700 mb-4">2. I would like to celebrate New Year's Day in ... because ...</h3>
-                <div className="space-y-4">
+                <div className="space-y-8">
                   <div className="flex items-start">
-                    <input type="radio" id="sentence2a" name="sentence2" className="mt-1 mr-3" />
-                    <label htmlFor="sentence2a" className="text-gray-700 text-lg">
-                      I would like to celebrate New Year's Day in the Netherlands because I want to see the famous fireworks display in Amsterdam.
+                    <label htmlFor="sentence1a" className="bg-gray-400 text-lg w-full h-px">
                     </label>
                   </div>
                   <div className="flex items-start">
-                    <input type="radio" id="sentence2b" name="sentence2" className="mt-1 mr-3" />
-                    <label htmlFor="sentence2b" className="text-gray-700 text-lg">
-                      I would like to celebrate New Year's Day in Iran because I want to experience the traditional Nowruz celebration with my family.
+                    <label htmlFor="sentence1a" className="bg-gray-400 text-lg w-full h-px">
                     </label>
                   </div>
                   <div className="flex items-start">
-                    <input type="radio" id="sentence2c" name="sentence2" className="mt-1 mr-3" />
-                    <label htmlFor="sentence2c" className="text-gray-700 text-lg">
-                      I would like to celebrate New Year's Day in China because I want to participate in the Spring Festival and see the dragon dances.
+                    <label htmlFor="sentence1a" className="bg-gray-400 text-lg w-full h-px">
                     </label>
                   </div>
                 </div>

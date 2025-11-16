@@ -22,7 +22,7 @@ const ModalContent: FC<ModalContentProps> = ({ children, onClose, isClosing }) =
 
   return (
     <div
-      className={`w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-xl lg:max-w-5xl xl:max-w-6xl h-auto bg-white rounded-4xl sm:rounded-5xl lg:rounded-6xl p-8 xs:p-10 sm:p-12 md:p-14 lg:p-18 xl:p-20 shadow-3xl relative transform transition-all duration-300 ease-out prose ${isClosing
+      className={`w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-5xl xl:max-w-6xl h-auto bg-white rounded-4xl sm:rounded-5xl lg:rounded-6xl p-8 xs:p-10 sm:p-12 md:p-14 lg:p-18 xl:p-20 shadow-3xl relative transform transition-all duration-300 ease-out prose ${isClosing
         ? 'scale-95 opacity-0'
         : isAnimating
           ? 'scale-95 opacity-0'
@@ -87,7 +87,7 @@ export const Modal: FC<ModalProps> = ({ children, trigger }) => {
     <>
       <button
         onClick={handleOpen}
-        className="cursor-pointer"
+        className="cursor-pointer w-full"
       >
         {trigger}
       </button>
