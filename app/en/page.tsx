@@ -310,9 +310,10 @@ export default function Home() {
       <Header currentLocale="en" />
 
       <main className="flex flex-col items-center justify-center flex-grow p-4 sm:p-6 md:p-8">
+        {/* Hero Section */}
         <section
           id="hero-section"
-          className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4"
+          className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 md:px-8"
         >
           <div className="w-full max-w-7xl">
             <div className="space-y-4 flex flex-col items-center prose prose-sm sm:prose-base md:prose-lg max-w-none">
@@ -361,7 +362,60 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Hero section */}
+
+        {/* Lesson Objectives Section */}
+        <section
+          id="lesson-objectives"
+          className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 md:px-8"
+        >
+          <div className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 border-4 border-gray-200">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">
+              Lesson Objectives
+            </h2>
+            <p className="text-gray-600 text-center text-lg mb-8">
+              Students are expected to:
+            </p>
+
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+                  1
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Speaking</h3>
+                  <p className="text-gray-700 text-lg">
+                    Talk about the favourite celebration
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+                  2
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Vocabulary & Pronunciation</h3>
+                  <p className="text-gray-700 text-lg">
+                    Use the new vocabulary smoothly with the correct pronunciation
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+                  3
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Reading</h3>
+                  <p className="text-gray-700 text-lg">
+                    Scan the text for specific chunks of details
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Question section */}
         <section
           id="question"
           className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4"
@@ -386,7 +440,7 @@ export default function Home() {
             ></textarea>
           </div>
         </section>
-        {/* Question section */}
+        {/* Vocabulary section */}
         <section
           id="vocabulary"
           className="flex min-h-screen items-center justify-center pt-16 sm:pt-20 md:pt-24 px-4"

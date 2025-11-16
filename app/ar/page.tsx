@@ -300,6 +300,57 @@ export default function ArabicPage() {
           <div id="result-ar" className="mt-6 text-center text-xl font-bold"></div>
         </div>
 
+        {/* قسم أهداف الدرس */}
+        <div
+          id="lesson-objectives"
+          className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 border-4 border-gray-200 mt-12"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">
+            أهداف الدرس
+          </h2>
+          <p className="text-gray-600 text-center text-lg mb-8">
+            من المتوقع أن يفعل الطلاب ما يلي:
+          </p>
+
+          <div className="space-y-6">
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+                1
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">التحدث</h3>
+                <p className="text-gray-700 text-lg">
+                  التحدث عن الاحتفال المفضل
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+                2
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">المفردات والنطق</h3>
+                <p className="text-gray-700 text-lg">
+                  استخدام المفردات الجديدة بسلاسة مع النطق الصحيح
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+                3
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">القراءة</h3>
+                <p className="text-gray-700 text-lg">
+                  تفحص النص بحثاً عن تفاصيل محددة
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* قسم الاحتفال المفضل */}
         <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 border-4 border-gray-200 mt-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">

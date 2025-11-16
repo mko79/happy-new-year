@@ -31,6 +31,7 @@ export default function Header({ currentLocale }: { currentLocale?: string }) {
     const handleScroll = () => {
       const sections = [
         'hero-section',
+        'lesson-objectives',
         'question',
         'vocabulary',
         'matching',
@@ -87,49 +88,55 @@ export default function Header({ currentLocale }: { currentLocale?: string }) {
           <div className='hidden sm:flex items-center space-x-4 sm:space-x-6 capitalize text-gray-800'>
             <button
               onClick={() => scrollToSection('hero-section')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'hero-section' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'hero-section' ? 'text-blue-600 font-bold' : ''}`}
             >
               home
             </button>
             <button
+              onClick={() => scrollToSection('lesson-objectives')}
+              className={`text-sm sm:text-base ${activeSection === 'lesson-objectives' ? 'text-blue-600 font-bold' : ''}`}
+            >
+              objectives
+            </button>
+            <button
               onClick={() => scrollToSection('question')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'question' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'question' ? 'text-blue-600 font-bold' : ''}`}
             >
               question
             </button>
             <button
               onClick={() => scrollToSection('vocabulary')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'vocabulary' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'vocabulary' ? 'text-blue-600 font-bold' : ''}`}
             >
               vocabulary
             </button>
             <button
               onClick={() => scrollToSection('matching')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'matching' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'matching' ? 'text-blue-600 font-bold' : ''}`}
             >
               matching
             </button>
             <button
               onClick={() => scrollToSection('main-idea')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'main-idea' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'main-idea' ? 'text-blue-600 font-bold' : ''}`}
             >
               main idea
             </button>
             <button
               onClick={() => scrollToSection('country-quiz')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'country-quiz' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'country-quiz' ? 'text-blue-600 font-bold' : ''}`}
             >
               country quiz
             </button>
             <button
               onClick={() => scrollToSection('new-year-sentences')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'new-year-sentences' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'new-year-sentences' ? 'text-blue-600 font-bold' : ''}`}
             >
               sentences
             </button>
             <button
               onClick={() => scrollToSection('favorite-celebration')}
-              className={`text-sm sm:text-base cursor-pointer capitalize font-medium ${activeSection === 'favorite-celebration' ? 'text-blue-600 font-bold' : ''}`}
+              className={`text-sm sm:text-base ${activeSection === 'favorite-celebration' ? 'text-blue-600 font-bold' : ''}`}
             >
               celebration
             </button>
@@ -159,6 +166,12 @@ export default function Header({ currentLocale }: { currentLocale?: string }) {
               className={`text-base py-2 px-4 rounded text-left ${activeSection === 'hero-section' ? 'text-blue-600 font-bold bg-gray-100' : 'hover:bg-gray-100'}`}
             >
               home
+            </button>
+            <button
+              onClick={() => scrollToSection('lesson-objectives')}
+              className={`text-base py-2 px-4 rounded text-left ${activeSection === 'lesson-objectives' ? 'text-blue-600 font-bold bg-gray-100' : 'hover:bg-gray-100'}`}
+            >
+              objectives
             </button>
             <button
               onClick={() => scrollToSection('question')}

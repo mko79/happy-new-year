@@ -134,6 +134,67 @@ export default function LocalePage({ params }: { params: { locale: string } }) {
           </div>
         </div>
       </section>
+
+      {/* Lesson Objectives Section */}
+      <div
+        id="lesson-objectives"
+        className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 border-4 border-gray-200 mt-12"
+      >
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">
+          {selectedLocale === 'ar' ? 'أهداف الدرس' : 'Lesson Objectives'}
+        </h2>
+        <p className="text-gray-600 text-center text-lg mb-8">
+          {selectedLocale === 'ar' ? 'من المتوقع أن يفعل الطلاب ما يلي:' : 'Students are expected to:'}
+        </p>
+
+        <div className="space-y-6">
+          <div className="flex items-start">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+              1
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                {selectedLocale === 'ar' ? 'التحدث' : 'Speaking'}
+              </h3>
+              <p className="text-gray-700 text-lg">
+                {selectedLocale === 'ar' ? 'التحدث عن الاحتفال المفضل' : 'Talk about the favourite celebration'}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+              2
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                {selectedLocale === 'ar' ? 'المفردات والنطق' : 'Vocabulary & Pronunciation'}
+              </h3>
+              <p className="text-gray-700 text-lg">
+                {selectedLocale === 'ar'
+                  ? 'استخدام المفردات الجديدة بسلاسة مع النطق الصحيح'
+                  : 'Use the new vocabulary smoothly with the correct pronunciation'}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4 mt-1">
+              3
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                {selectedLocale === 'ar' ? 'القراءة' : 'Reading'}
+              </h3>
+              <p className="text-gray-700 text-lg">
+                {selectedLocale === 'ar'
+                  ? 'تفحص النص بحثاً عن تفاصيل محددة'
+                  : 'Scan the text for specific chunks of details'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
