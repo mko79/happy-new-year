@@ -384,7 +384,7 @@ export default function Home() {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Speaking</h3>
                   <p className="text-gray-700 text-lg">
-                    Talk about the favourite celebration
+                    Talk about their favourite celebration
                   </p>
                 </div>
               </div>
