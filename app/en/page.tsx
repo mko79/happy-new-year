@@ -34,14 +34,14 @@ export default function Home() {
     },
     {
       word: "special",
-      definiton: "exceplional, unique",
+      definiton: "exceptional, unique",
       part: "adjective",
       example: "this is a special gift",
       imageUrl: specail,
     },
     {
       word: "program",
-      definiton: "show that is broadcast on teleision or radios",
+      definiton: "show that is broadcast on television or radios",
       part: "noun",
       example:
         "last night, I styed up late",
@@ -71,7 +71,7 @@ export default function Home() {
     },
     {
       word: "celebrate",
-      definiton: "fistival, festivities ",
+      definiton: "festival, festivities ",
       part: "noun",
       example:
         "Hir birthday party was a wonderfull celebration",
@@ -79,7 +79,7 @@ export default function Home() {
     },
     {
       word: "send",
-      definiton: "to deliver somethings",
+      definiton: "to deliver something",
       part: "verb",
       example: "please, send me your phone number",
       imageUrl: send,
